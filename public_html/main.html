@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Fitts Law</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        <link rel="stylesheet" type="text/css" href="styles/main.css">
+        <link rel="stylesheet" type="text/css" href="styles/style.css">
+
+        <script src="code/jquery.js"></script>
+        <script src="code/first.js"></script>
+        <script src="code/table.js"></script>
+        <script src="code/algo.js"></script>
+        <script src="code/second.js"></script>
+        
+    </head>
+    <body style="background-color:#E6E6FA">
+        
+        
+       <div id="alertMessage" class="container-fluid">   
+           <a href="index.html" style="color:#00BFFF;"><h1><b>Click For Starting the next Trial</b></h1></a>
+           
+                        </div>
+              
+        <div id="resultsModal" class="modal fade" role="dialog"> 
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 style="color:#00BFFF;" class="modal-title">You have successfully completed the trial
+                            <br>
+                            Your Result:
+                        </h4>
+                    </div>
+                    <div class="modal-body">
+                        
+                        <table id="results" style="background-color:#E6E6FA" class="table table-striped table-hover table-bordered"></table>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" style="background-color:#2244aa" class="btn btn-success" onClick ="$('#results').tableExport({type:'excel',escape:'false', tableName:'Results'});">Download the Result</button>
+                     
+                        <button type="button" style="color:#2244aa" class="btn btn-default" data-dismiss="modal">Close</button>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>
